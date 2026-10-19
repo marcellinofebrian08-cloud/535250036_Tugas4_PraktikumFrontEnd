@@ -90,3 +90,10 @@ a {
   background: var(--primary);
   color: var(--white);
 }
+
+.footer {
+  background: var(--primary-dark);
+  color: #dbeafe;
+  padding: 24px 0;
+  text-align: center;
+}
