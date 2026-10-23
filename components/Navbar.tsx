@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const links = [
   { href: "/", label: "Beranda" },
@@ -17,7 +18,13 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container navbar-inner">
         <Link href="/" className="logo">
-          PT Maju Bersama
+          <Image
+            src="/logo.png"
+            alt="Logo PT Maju Bersama"
+            width={36}
+            height={36}
+          />
+          <span>PT Maju Bersama</span>
         </Link>
 
         <nav className="nav-links">
