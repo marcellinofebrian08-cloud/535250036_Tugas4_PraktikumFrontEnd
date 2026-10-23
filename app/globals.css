@@ -192,3 +192,9 @@ a.card:hover {
   max-width: 640px;
   margin: 0 auto 24px;
 }
+
+
+.about-text {
+  color: var(--text);
+  max-width: 720px;
+}
