@@ -41,7 +41,6 @@ a {
   padding: 40px 0 60px;
 }
 
-
 .navbar {
   background: var(--white);
   border-bottom: 1px solid var(--border);
@@ -63,7 +62,7 @@ a {
 
 .logo {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 19px;
   color: var(--primary-dark);
 }
 
@@ -98,7 +97,6 @@ a {
   text-align: center;
 }
 
-
 .section {
   margin-bottom: 48px;
 }
@@ -108,7 +106,7 @@ a {
 }
 
 .section-title h2 {
-  font-size: 1.8rem;
+  font-size: 29px;
   color: var(--primary-dark);
   margin-bottom: 8px;
 }
@@ -175,14 +173,13 @@ a.card:hover {
   margin-bottom: 6px;
 }
 
-
 .hero {
   text-align: center;
   padding: 60px 0;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
+  font-size: 42px;
   color: var(--primary-dark);
   margin-bottom: 16px;
 }
@@ -193,12 +190,10 @@ a.card:hover {
   margin: 0 auto 24px;
 }
 
-
 .about-text {
   color: var(--text);
   max-width: 720px;
 }
-
 
 .back-link {
   display: inline-block;
@@ -210,4 +205,38 @@ a.card:hover {
 .detail-heading {
   margin: 24px 0 12px;
   color: var(--primary-dark);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main {
+    padding: 24px 0 40px;
+  }
+
+  .navbar-inner {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
 }
