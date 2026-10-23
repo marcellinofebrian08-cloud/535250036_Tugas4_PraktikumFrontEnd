@@ -198,3 +198,16 @@ a.card:hover {
   color: var(--text);
   max-width: 720px;
 }
+
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.detail-heading {
+  margin: 24px 0 12px;
+  color: var(--primary-dark);
+}
