@@ -1,69 +1,40 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import Card from "@/components/Card";
+import SectionTitle from "@/components/SectionTitle";
+import { services } from "@/data/services";
 
-export default function Home() {
+export default function HomePage() {
+  const featured = services.slice(0, 3);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <section className="hero">
+        <h1>Selamat Datang di PT Maju Bersama</h1>
+        <p>
+          Kami membantu bisnis Anda berkembang melalui solusi digital yang
+          inovatif, handal, dan mudah digunakan.
+        </p>
+        <Link href="/services" className="btn">
+          Lihat Layanan Kami
+        </Link>
+      </section>
+
+      <section className="section">
+        <SectionTitle
+          title="Layanan Unggulan"
+          subtitle="Beberapa layanan yang paling sering kami tangani."
         />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+        <div className="grid">
+          {featured.map((service) => (
+            <Card
+              key={service.slug}
+              title={service.title}
+              description={service.description}
+              href={`/services/${service.slug}`}
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
